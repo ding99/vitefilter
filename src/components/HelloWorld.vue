@@ -2,8 +2,7 @@
 <template>
   <div>
     <h2>Filter learnVue Articles</h2>
-    <input type="text" placeholder="Filter Search" v-model="query" />
-    <button @click="reset">Reset</button>
+    <input type="text" placeholder="Filter Search" v-model="query" /> <button @click="reset">Reset</button>
     <br/>
     {{ query }}
   </div>
