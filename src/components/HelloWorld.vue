@@ -3,16 +3,21 @@
   <div>
     <h2>Filter learnVue Articles</h2>
     <input type="text" placeholder="Filter Search" v-model="query" />
+    <br />
     <button @click="reset">Reset</button>
-    <br/>
-    {{ query }}
+    <search-results :query='query' />
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue'
+import SearchResults from './SearchResults.vue'
 
 export default {
+  components:{
+    SearchResults
+  },
+
   setup() {
     const query = ref("");
 
