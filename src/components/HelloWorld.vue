@@ -4,7 +4,8 @@
     <h2>Filter learnVue Articles</h2>
     <input type="text" placeholder="Filter Search" v-model="query" />
     <br />
-    <!-- <button @click="reset">Reset</button> -->
+    <button @click="reset">Reset</button>
+    <br />
     <!-- <search-results :query='query' /> -->
     {{ query }}
   </div>
@@ -22,12 +23,12 @@ export default {
   setup () {
     const query = ref ("");
 
-    // const reset = (evt) => {
-    //   query.value = "";  // clears the query
-    // }
+    const reset = (evt) => {
+      query.value = "";  // clears the query
+    }
 
     return {
-      // reset,
+      reset,
       query,
     };
   },
