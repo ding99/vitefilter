@@ -17,10 +17,10 @@ export default {
   props: {
     query: String,
   },
-  setup(props, context) {
-    const filteredTitles = computed(() => {
-      return titles.filter((s) =>
-        s.Name.toLowerCase().includes(props.query.toLowerCase())
+  setup (props, context) {
+    const filteredTitles = computed ( () => {
+      return titles.filter ( (s) =>
+        s.Name.toLowerCase ().includes (props.query.toLowerCase ())
       );
     });
   },
