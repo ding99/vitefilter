@@ -7,7 +7,6 @@
     <button @click='reset'> Reset </button>
     <br />
     <search-results :query='query' />
-    <!-- {{ query }} -->
   </div>
 </template>
 
