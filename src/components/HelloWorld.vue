@@ -2,35 +2,42 @@
 <template>
   <div>
     <h2>Filter learnVue Articles</h2>
-    <input type="text" placeholder="Filter Search" v-model="query" />
+    <input type='text' placeholder='Filter Search' v-model='query' />
     <br />
-    <button @click="reset">Reset</button>
+    <button @click='reset'> Reset </button>
     <br />
-    <!-- <search-results :query='query' /> -->
-    {{ query }}
+    <search-results :query='query' />
+    <!-- {{ query }} -->
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-// import SearchResults from './SearchResults.vue'
+import SearchResults from './SearchResults.vue'
 
 export default {
-  // components:{
-  //   SearchResults
-  // },
+  components: {
+    SearchResults
+  },
 
   setup () {
-    const query = ref ("");
+    const query = ref ('');
 
     const reset = (evt) => {
-      query.value = "";  // clears the query
+      query.value = ''  // clears the query
     }
 
     return {
       reset,
-      query,
-    };
-  },
-};
+      query
+    }
+  }
+}
 </script>
+
+<style>
+    input[type='text'] {
+      margin-bottom: 18px;
+      padding: 12px;
+    }
+</style>
